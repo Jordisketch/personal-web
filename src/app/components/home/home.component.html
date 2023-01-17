@@ -1,0 +1,62 @@
+<div fxLayout="column" fxLayoutAlign="space-around center" class="contenedor">
+
+  <div class="mat-card-principal">
+    <mat-card>
+      <mat-card-header>
+
+      </mat-card-header>
+      <mat-card-content fxLayout="column" fxLayoutAlign="space-around center">
+        <div class="HI">
+          Hello
+        </div>
+        <div class="nombre">
+          I'm Jordi Hidalgo
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <div class="experience" fxLayout="row" fxLayoutAlign="space-around center">
+    <p>
+      I've been working as a FullStack Developer over the past 1+ year.
+      <img src="./assets/imgs/1f680.png" alt="" width="40" height="40" class="cohete">
+    </p>
+  </div>
+
+  <div class="animateIcon">
+    <mat-icon>
+      arrow_downward
+    </mat-icon>
+  </div>
+
+  <app-activites></app-activites>
+
+  <div fxLayout="column" fxLayoutAlign="space-around center">
+    <h3>Here are some technologies that I use the most</h3>
+    <mat-grid-list [cols]="breakpoint" rowHeight="2:1" (window:resize)="onResize($event)">
+      <mat-grid-tile *ngFor="let data of tileList">
+        <app-technologies [src]="data.src" [title]="data.title" [alt]="data.alt"></app-technologies>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+
+
+  <footer fxLayout="row" fxLayoutAlign="center center">
+    <a href="mailto:hidalgojordi7@gmail.com" matTooltip="Send email">
+      <i class="bi bi-envelope"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/jordi-hidalgo-palma" matTooltip="Open LinkedIn">
+      <i class="bi bi-linkedin">
+
+      </i>
+    </a>
+    <a href="https://github.com/Jordisketch?tab=repositories" matTooltip="Open GitHub Repositories">
+      <i class="bi bi-github"></i>
+    </a>
+
+    <button mat-icon-button matTooltip="Open Curriculum Vitae" (click)="openCV()">
+      <i class="bi bi-file-earmark-person"></i>
+    </button>
+  </footer>
+
+</div>

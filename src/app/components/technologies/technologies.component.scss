@@ -1,0 +1,39 @@
+mat-card{
+  width: 210px;
+  height: 143px;
+  background: #556867;
+  box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  img{
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 4px;
+    margin-bottom: 15px;
+  }
+  mat-card-content{
+    font-family: 'Nunito', serif;
+    font-style: normal;
+    font-size: 22px;
+    line-height: 32px;
+    color: #CDCDCD;
+  }
+}
+
+mat-card:hover{
+  animation: move 1s;
+}
+@keyframes move {
+  from {
+    transform: translateY(0%);
+  }
+
+  to {
+    transform: translateY(-10%);
+  }
+}
+@media (max-width: 680px) {
+  mat-card{
+    padding: 40px;
+    margin: 50px;
+  }
+
+}

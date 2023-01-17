@@ -1,0 +1,59 @@
+//preguntarle a luis por validacion de nombre e identificador a la hora de guardar la cartera
+
+.contenedor-experiencia {
+  margin-top: 40px;
+}
+
+.experience{
+  color: aliceblue;
+}
+
+.mat-chip.mat-standard-chip.mat-chip-selected.mat-primary {
+  background-color: #009999;
+  color: #fff;
+}
+.mat-card{
+  max-width: 500px; height: 400px; margin: 0 auto;
+}
+
+.status{
+  margin-bottom: 5px;
+}
+
+.carousel{
+  padding-top: 10px;
+}
+.carousel-item {
+  min-width: 800px;
+}
+
+
+mat-icon {
+  transform: scale(1.5);
+  color: black;
+}
+
+
+@media (max-width: 600px) {
+  .carousel-item {
+    min-width: 510px;
+  }
+
+  .mat-card{
+    margin: 0 auto;
+    width: 400px;
+    .mat-card-content{
+      .mat-icon{
+        transform: scale(1);
+      }
+      .mat-list, .mat-list-item, div {
+        font-size: 13px;
+      }
+      mat-chip-list, mat-chip{
+        font-size: 11px;
+      }
+    }
+  }
+
+
+}
