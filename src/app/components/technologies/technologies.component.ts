@@ -7,7 +7,7 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class TechnologiesComponent implements OnInit {
   @Input() src: string = '';
-  @Input() alt: string = ''
+  @Input() alt: string = '';
   @Input() title: string = '';
   constructor() { }
 
