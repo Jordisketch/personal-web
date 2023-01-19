@@ -27,10 +27,7 @@ export class HomeComponent implements OnInit {
   ];
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {
-    if(event.target?.innerWidth <= 680)
-      this.breakpoint = 1
-
-    if(event.target?.innerWidth > 680 && event?.target?.innerWidth <= 980)
+    if(event?.target?.innerWidth <= 980)
       this.breakpoint = 2
 
     if(event.target?.innerWidth > 980)
@@ -39,10 +36,7 @@ export class HomeComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    if(window.innerWidth <= 680)
-      this.breakpoint = 1
-
-    if(window.innerWidth > 680 && window.innerWidth <= 980)
+    if(window.innerWidth <= 980)
       this.breakpoint = 2
 
     if(window.innerWidth > 980)
@@ -60,9 +54,13 @@ export class HomeComponent implements OnInit {
     const fileURL = URL.createObjectURL(file);
     window.open(fileURL);
     setTimeout(() => {
-      window.document.title = 'asas'
-
+      window.document.title = 'asas';
     }, 10)
+  }
+
+
+  scroll(e: HTMLElement): void{
+    e.scrollIntoView();
   }
 
 }

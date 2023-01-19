@@ -1,86 +1,122 @@
-.contenedor{
+.contenedor {
   min-height: 100vh;
   background-color: #444444;
-  .mat-card-principal{
+
+  .mat-toolbar{
+    z-index: 1  ;
+    background-color: transparent;
+    button{
+      color: #b7530a;
+      font-size: 18px;
+      font-weight: 800;
+    }
+  }
+  .moon {
+    top: -100px;
+    right: 0;
+    z-index: -1px;
+    position: absolute;
+  }
+
+  .mat-card-principal {
     min-width: 40%;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
     margin-top: 15px;
-    mat-card{
+
+    mat-card {
       background: #BCB7B7;
       border: 2px solid rgba(0, 0, 0, 0.16);
       box-shadow: 10px 20px 4px rgba(0, 0, 0, 0.25);
       border-radius: 8px;
-      mat-card-content{
-        .HI{
+
+      mat-card-content {
+        .HI {
           font-weight: 800;
           font-size: 24px;
         }
-        .nombre{
-          font-style: normal;
-          font-weight: 800;
-          font-size: 32px;
-          color: #FFFFFF;
-          overflow: hidden; /* Ensures the content is not revealed until the animation */
-          border-right: .15em solid orange; /* The typwriter cursor */
-          white-space: nowrap; /* Keeps the content on a single line *//* Gives that scrolling effect as the typing happens */
-          animation:
-            typing 3.5s infinite,
+
+        .nombre {
+          h3 {
+            margin: 0;
+            font-style: normal;
+            font-weight: 800;
+            font-size: 32px;
+            color: #FFFFFF;
+            overflow: hidden; /* Ensures the content is not revealed until the animation */
+            border-right: .15em solid orange; /* The typwriter cursor */
+            white-space: nowrap; /* Keeps the content on a single line *//* Gives that scrolling effect as the typing happens */
+            animation: typing 3.5s infinite,
             blink-caret .75s step-end infinite;
+          }
         }
       }
     }
   }
 
-  .experience{
-    p{
+  .experience {
+    z-index: 1;
+
+    p {
       font-size: 24px;
-      color: #cecece;
+      color: #c2c1c1;
+      font-weight: 800;
     }
-    img{
+
+    img {
       margin-left: 15px;
       animation: move .5s alternate infinite;
+
     }
   }
-  mat-grid-list{
+
+  mat-grid-list {
     width: 70vw;
     height: 50vh;
   }
-  h3{
+
+  .activities {
+    text-decoration: overline;
+    margin: 15px;
     font-size: 28px;
-    color: #cecece;
+    color: #ff7b22;
   }
-  .animateIcon{
+
+  .animateIcon {
     color: #BCB7B7;
     margin: 30px;
+    transform: scale(1.4);
+
     mat-icon {
       animation: appear 1.4s alternate infinite;
-      transform: scale(1.8);
+      color: #c2c1c1;
     }
   }
 }
 
-footer{
+footer {
   display: flex;
   position: sticky;
   bottom: 0;
   padding: 5px;
   width: 100%;
-  background: #BCB7B7;
-  i{
-    margin-right: 15px;
+  a, button {
+    transform: scale(1.2  );
+    i {
+      color: #ff7b22;
+      margin-right: 15px;
+    }
   }
 }
 
 @keyframes move {
-  from{
+  from {
     transform: translateY(-13%);
   }
-
-
   to {
     transform: translateY(-15%);
   }
 }
+
 @keyframes appear {
   from {
     opacity: 0;
@@ -94,33 +130,49 @@ footer{
 }
 
 @keyframes typing {
-  from { width: 0 }
-  to { width: 35% }
+  from {
+    width: 0
+  }
+  to {
+    width: 100%
+  }
 }
 
 @keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: orange; }
+  from, to {
+    border-color: transparent
+  }
+  50% {
+    border-color: orange;
+  }
 }
-
 
 @media (max-width: 680px) {
-  .mat-card-principal{
-    width: 98%;
-  }
-  .experience{
-    margin: 15px;
-    p{
-      font-size: 20px;
+  .contenedor {
+    .activities{
+      font-size: 22px;
     }
   }
-  h3{
-    font-size: 16px;
-  }
-
-  @keyframes typing {
-     from { width: 0 }
-     to { width: 57% }
-   }
-
 }
+
+@media (max-width: 1280px) {
+  .mat-card-principal {
+    width: 80%;
+  }
+}
+
+@media (max-width: 1700px) {
+  .contenedor {
+    .experience {
+      margin-left: 15px;
+
+      p {
+        color: #b7530a;
+      }
+    }
+  }
+  .animateIcon {
+    display: none;
+  }
+}
+

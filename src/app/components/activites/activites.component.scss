@@ -4,12 +4,13 @@
   animation: moveToCenter 1.2s;
   button{
     text-decoration: underline;
-    color: #c2c1c1;
+    color: #ff7b22;
     font-size: 20px;
     letter-spacing: 2px;
   }
   p{
     margin-bottom: 0;
+    z-index: 1;
   }
   .animate{
     animation: animate 2s linear;
@@ -23,12 +24,18 @@
   100% {
     transform: translateY(0%);
   }
-}@keyframes animate {
+}
+@keyframes animate {
   from{
     opacity: 0;
   }
 
   to {
     opacity: 1;
+  }
+}
+@media (max-width: 1700px) {
+  .activities{
+    margin-top: 165px;
   }
 }

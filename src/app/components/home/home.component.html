@@ -1,5 +1,21 @@
 <div fxLayout="column" fxLayoutAlign="space-around center" class="contenedor">
-
+  <mat-toolbar fxLayout="row">
+    <button mat-button (click)="openCV()">
+      Open Curriculum Vitae
+    </button>
+    <button mat-button (click)="scroll(activities)">
+      Activities
+    </button>
+    <button mat-button (click)="scroll(technologies)">
+      Technologies
+    </button>
+    <button mat-button>
+      Projects
+    </button>
+  </mat-toolbar>
+  <div class="moon">
+    <img src="../../../assets/imgs/moon.png" alt="" style="background-image: none !important;">
+  </div>
   <div class="mat-card-principal">
     <mat-card>
       <mat-card-header>
@@ -10,7 +26,7 @@
           Hello
         </div>
         <div class="nombre">
-          I'm Jordi Hidalgo
+          <h3> I'm Jordi Hidalgo</h3>
         </div>
       </mat-card-content>
     </mat-card>
@@ -29,11 +45,14 @@
     </mat-icon>
   </div>
 
-  <app-activites></app-activites>
+  <div #activities>
+    <app-activites></app-activites>
 
-  <div fxLayout="column" fxLayoutAlign="space-around center">
-    <h3>Here are some technologies that I use the most</h3>
-    <mat-grid-list [cols]="breakpoint" rowHeight="2:1" (window:resize)="onResize($event)">
+  </div>
+
+  <div fxLayout="column" fxLayoutAlign="space-around center" #technologies>
+    <h3 class="activities">Here are some technologies that I use the most</h3>
+    <mat-grid-list [cols]="breakpoint" rowHeight="4:1" (window:resize)="onResize($event)">
       <mat-grid-tile *ngFor="let data of tileList">
         <app-technologies [src]="data.src" [title]="data.title" [alt]="data.alt"></app-technologies>
       </mat-grid-tile>
@@ -47,16 +66,11 @@
     </a>
     <a href="https://www.linkedin.com/in/jordi-hidalgo-palma" matTooltip="Open LinkedIn">
       <i class="bi bi-linkedin">
-
       </i>
     </a>
     <a href="https://github.com/Jordisketch?tab=repositories" matTooltip="Open GitHub Repositories">
       <i class="bi bi-github"></i>
     </a>
-
-    <button mat-icon-button matTooltip="Open Curriculum Vitae" (click)="openCV()">
-      <i class="bi bi-file-earmark-person"></i>
-    </button>
   </footer>
 
 </div>
