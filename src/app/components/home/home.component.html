@@ -1,7 +1,7 @@
 <div fxLayout="column" fxLayoutAlign="space-around center" class="contenedor">
   <mat-toolbar fxLayout="row">
-    <button mat-button (click)="openCV()">
-      Open Curriculum Vitae
+    <button mat-button (click)="openCV()" matTooltip="Open curriculum vitae">
+      Open Cv
     </button>
     <button mat-button (click)="scroll(activities)">
       Activities
@@ -9,7 +9,7 @@
     <button mat-button (click)="scroll(technologies)">
       Technologies
     </button>
-    <button mat-button>
+    <button mat-button  (click)="scroll(projects)">
       Projects
     </button>
   </mat-toolbar>
@@ -47,11 +47,14 @@
 
   <div #activities>
     <app-activites></app-activites>
+  </div>
+  <div class="contenedor-jupiter">
+    <img src="../../../assets/imgs/jupiter.png" alt="" height="80" width="80" class="jupiter">  
 
   </div>
 
   <div fxLayout="column" fxLayoutAlign="space-around center" #technologies>
-    <h3 class="activities">Here are some technologies that I use the most</h3>
+    <h3 class="hyper">Here are some technologies that I use the most</h3>
     <mat-grid-list [cols]="breakpoint" rowHeight="4:1" (window:resize)="onResize($event)">
       <mat-grid-tile *ngFor="let data of tileList">
         <app-technologies [src]="data.src" [title]="data.title" [alt]="data.alt"></app-technologies>
@@ -59,17 +62,27 @@
     </mat-grid-list>
   </div>
 
+  <div class="contenedor-ufo">
+    <img src="../../../assets/imgs/ufo.png" alt="" height="100" width="100" class="UFO">  
+  </div>
+  
+  <div fxLayout="column" fxLayoutAlign="space-around center" #projects class="projects">
+   <div fxLayout="row wrap" fxLayoutAlign="space-around center" fxLayoutGap="15px">
+     <h3 class="hyper">Projects In Progress...</h3>
+     <img src="../../../assets/imgs/hands.png" alt="" height="40" width="40" class="Hands">  
 
-  <footer fxLayout="row" fxLayoutAlign="center center">
+  </div>
+  </div>
+
+  <footer fxLayout="row wrap" fxLayoutAlign="center center" fxLayoutGap="15px">
     <a href="mailto:hidalgojordi7@gmail.com" matTooltip="Send email">
-      <i class="bi bi-envelope"></i>
+      <img src="../../../assets/imgs/email.png" alt="" height="15" width="15">  
     </a>
     <a href="https://www.linkedin.com/in/jordi-hidalgo-palma" matTooltip="Open LinkedIn">
-      <i class="bi bi-linkedin">
-      </i>
+      <img src="../../../assets/imgs/linkedin.png" alt="" height="15" width="15">
     </a>
     <a href="https://github.com/Jordisketch?tab=repositories" matTooltip="Open GitHub Repositories">
-      <i class="bi bi-github"></i>
+      <img src="../../../assets/imgs/github.png" alt="" height="15" width="15">
     </a>
   </footer>
 

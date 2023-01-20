@@ -19,7 +19,7 @@ export class HomeComponent implements OnInit {
     {src: './assets/imgs/icons8-javascript-48.png', title: 'JavaScript', alt: 'JavaScript'},
     {src: './assets/imgs/Typescript_logo_2020.svg.png', title: 'TypeScript', alt: 'TypeScrpit'},
     {src: './assets/imgs/icons8-java-48.png', title: 'Java', alt: 'Java'},
-    {src: './assets/imgs/icons8-angular-24.png', title: 'Angular', alt: 'Angular'},
+    {src: './assets/imgs/angularicon.png', title: 'Angular', alt: 'Angular'},
     {src: './assets/imgs/icons8-bootstrap-48.png', title: 'Bootstrap', alt: 'Bootstrap'},
     {src: './assets/imgs/spring-boot-logo.png', title: 'SpringBoot', alt: 'SpringBoot'},
     {src: './assets/imgs/git.png', title: 'Git', alt: 'Git'}
@@ -53,9 +53,6 @@ export class HomeComponent implements OnInit {
     const file = new Blob([byteArray], { type: 'application/pdf;base64' });
     const fileURL = URL.createObjectURL(file);
     window.open(fileURL);
-    setTimeout(() => {
-      window.document.title = 'asas';
-    }, 10)
   }
 
 

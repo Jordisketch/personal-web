@@ -71,15 +71,28 @@
 
   mat-grid-list {
     width: 70vw;
-    height: 50vh;
   }
 
-  .activities {
+  .hyper {
     text-decoration: overline;
     margin: 15px;
     font-size: 28px;
     color: #ff7b22;
   }
+
+  .contenedor-jupiter{
+    margin: 50px;
+  }
+  
+  .contenedor-ufo{
+    margin: 25px;
+    img{
+      animation: bigger 2s alternate 5s  infinite
+    }
+  }
+
+  
+
 
   .animateIcon {
     color: #BCB7B7;
@@ -99,9 +112,9 @@ footer {
   bottom: 0;
   padding: 5px;
   width: 100%;
-  a, button {
+  a {
     transform: scale(1.2  );
-    i {
+    i, mat-icon {
       color: #ff7b22;
       margin-right: 15px;
     }
@@ -128,6 +141,19 @@ footer {
     transform: scale(1.8);
   }
 }
+
+
+
+@keyframes bigger {
+  from {
+    transform: scale(1.2);
+  }
+
+  to {
+    transform: scale(1.4);
+  }
+}
+
 
 @keyframes typing {
   from {
